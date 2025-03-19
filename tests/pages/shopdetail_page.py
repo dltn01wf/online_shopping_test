@@ -3,6 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
 import time
 import random
 
@@ -19,28 +20,36 @@ class ShopdetailPage:
     def open_page(self, url : str):
         self.driver.get(url)
 
+    #bestseller에서 작동    
     def all_click_by_bestiem(self):
         #link= self.driver.find_elements(By.XPATH,'//*[@id="prdBrand"]/div[3]/div/ul//a[@href]')
         links=self.driver.find_elements(By.CLASS_NAME ,"prdImg")
         print(len(links))
         for i in links :
+            #클릭을 사용시 화면에 보이는 부분만 가능 대신 화면이 내려가면서 클릭되기 때문에 둘중 하나 선택
+            #i.click()
             self.driver.execute_script("arguments[0].click();", i)
             self.driver.back()
             time.sleep(0.5)
-        '''for index, j in enumerate(links) :
-            print("456")
-            if index % 2 ==1:
-                print("789")
-                self.driver.execute_script("arguments[0].click();", links[select])
-                #self.driver.back()'''
         
-
+    #bestseller에서 작동
     def choice_click_by_bestiem(self, select : int) :
         #find_elements(By.XPATH, './/a[@href]')
         links=self.driver.find_elements(By.CLASS_NAME ,"prdImg")
         self.driver.execute_script("arguments[0].click();", links[select])
 
+    #bestseller에서 작동
     def random_click_by_bestiem(self) :
         #find_elements(By.XPATH, './/a[@href]')
         links=self.driver.find_elements(By.CLASS_NAME ,"prdImg")
         self.driver.execute_script("arguments[0].click();", links[random.randint(0, len(links)-1)])
+
+    #shopdetail에서 작동
+    def choice_option(self, select : int) :
+        option = self.driver.find_element(By.CLASS_NAME ,"basic_option")
+        Select(option).select_by_index(select)
+    
+    #shopdetail에서 작동
+    def random_option(self) :
+        option = self.driver.find_element(By.CLASS_NAME ,"basic_option")
+        Select(option).select_by_index(random.randint(1, len(Select(option).options) - 1))
