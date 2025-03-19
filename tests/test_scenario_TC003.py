@@ -21,16 +21,9 @@ class TestMainPage:
             wait = ws(driver, 10) 
             wait.until(EC.url_contains("bestseller"))
             assert "bestseller" in driver.current_url
-
-            bestitem = driver.find_elements(By.XPATH,'//*[@id="prdBrand"]/div[3]/div/ul')
-            for i in bestitem :
-                link = i.find_elements(By.XPATH, './/a[@href]')
-                for index, j in enumerate(link) :
-                    if index % 2 ==1:
-                        j.click()
-                        driver.back()
-            time.sleep(15)
-            #find_elements(By.XPATH, './/a[@href]')
+            Shopdetail_page.random_click_by_bestiem()
+            time.sleep(10)
+            
         except NoSuchElementException as e:
             assert False
 

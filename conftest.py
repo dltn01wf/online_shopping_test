@@ -38,7 +38,9 @@ def driver():
     #    - excludeSwitches, useAutomationExtension
     chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_experimental_option("useAutomationExtension", False)
-    #chrome_options.add_argument("--blink-settings=imagesEnabled=false") 이미지 비활성화를 통해 로딩 빨라지기
+    
+    #이미지 비활성화를 통해 로딩 빨라지기
+    chrome_options.add_argument("--blink-settings=imagesEnabled=false") 
 
     # 혹은 다음 방식으로 Blink 특징을 비활성화할 수도 있으나
     # "AutomationControlled" 자체가 표기되지 않도록 한다.

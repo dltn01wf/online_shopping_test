@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 import time
+import random
 
 class ShopdetailPage:
     URL = "https://www.nibbuns.co.kr/shop/bestseller.html?xcode=BEST&ref=&suburl=shop%2Fbestseller.html%3Fxcode%3DBEST/"
@@ -18,13 +19,28 @@ class ShopdetailPage:
     def open_page(self, url : str):
         self.driver.get(url)
 
-    def search_items(self, item_name : str):
-        search_input_box = self.driver.find_element(By.XPATH, self.SEARCH_INPUT_ID)
-        for char in item_name:
-            search_input_box.send_keys(char)
-            time.sleep(2)
-        search_input_box.send_keys(Keys.ENTER)
+    def all_click_by_bestiem(self):
+        #link= self.driver.find_elements(By.XPATH,'//*[@id="prdBrand"]/div[3]/div/ul//a[@href]')
+        links=self.driver.find_elements(By.CLASS_NAME ,"prdImg")
+        print(len(links))
+        for i in links :
+            self.driver.execute_script("arguments[0].click();", i)
+            self.driver.back()
+            time.sleep(0.5)
+        '''for index, j in enumerate(links) :
+            print("456")
+            if index % 2 ==1:
+                print("789")
+                self.driver.execute_script("arguments[0].click();", links[select])
+                #self.driver.back()'''
+        
 
-    def click_by_LINK_TEST(self, like_text: str):
-        login_button = self.driver.find_element(By.LINK_TEXT, like_text)
-        login_button.click()
+    def choice_click_by_bestiem(self, select : int) :
+        #find_elements(By.XPATH, './/a[@href]')
+        links=self.driver.find_elements(By.CLASS_NAME ,"prdImg")
+        self.driver.execute_script("arguments[0].click();", links[select])
+
+    def random_click_by_bestiem(self) :
+        #find_elements(By.XPATH, './/a[@href]')
+        links=self.driver.find_elements(By.CLASS_NAME ,"prdImg")
+        self.driver.execute_script("arguments[0].click();", links[random.randint(0, len(links)-1)])
