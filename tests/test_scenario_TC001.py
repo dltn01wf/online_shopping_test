@@ -42,8 +42,7 @@ class TestTC001:
             wait.until(EC.url_contains("nibbuns.co.kr/")) 
             assert "nibbuns.co.kr/" in driver.current_url
             
-            
-            
+                
         except Exception as e:
             print("error")
             
