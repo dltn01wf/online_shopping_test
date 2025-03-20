@@ -28,7 +28,7 @@ class REVIEW_PAGE:
 
     # 카테고리 설정
     def CATEGORY_CLICK(self):
-        category_button = self.driver.find_element(By.XPATH,'//*[@id="selected_cate"]/span')
+        category_button = self.driver.find_element(By.CSS_SELECTOR,'select[name="category"]').click()
 
     # 카테고리 설정(TOP)
     def SELECT_CATEGORY(self,category_name: str):
