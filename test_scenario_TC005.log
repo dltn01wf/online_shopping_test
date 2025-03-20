@@ -1,7 +1,48 @@
-2025-03-20 11:01:50,832 - INFO - [Test1.] 테스트 시작
-2025-03-20 11:01:50,832 - INFO - ✅ Chrome Driver Start
-2025-03-20 11:02:14,856 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
-2025-03-20 11:02:14,861 - INFO - ✅현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom
-2025-03-20 11:02:39,253 - INFO - ✅ 글쓰기 페이지 이동
-2025-03-20 11:02:39,259 - INFO - '글쓰기' 페이지 이동중..
-2025-03-20 11:02:39,259 - INFO - ✅현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:17:27,147 - INFO - [Test1.] 문의페이지 >> 글쓰기 페이지 이동 테스트 시작
+2025-03-20 16:17:27,147 - INFO - ✅ Chrome Driver Start
+2025-03-20 16:17:51,193 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 16:18:15,572 - INFO - ✅ 글쓰기 페이지 이동
+2025-03-20 16:18:15,578 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:18:15,579 - INFO - ✅[TEST1.] 테스트 완료
+2025-03-20 16:18:15,581 - INFO - [Test2.] 글쓰기 페이지 미 입력 작성 테스트 시작
+2025-03-20 16:18:15,581 - INFO - ✅ Chrome Driver Start
+2025-03-20 16:18:38,904 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 16:19:03,296 - INFO - ✅ 글쓰기 페이지 이동
+2025-03-20 16:19:03,303 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:19:04,428 - INFO - ✅ '작성 완료' 클릭
+2025-03-20 16:19:05,440 - INFO - ✅ 팝업 등장 : 이름을 입력하세요. - 기능 정상 작동
+2025-03-20 16:19:05,454 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:19:05,454 - INFO - ✅[TEST2.] 테스트 완료
+2025-03-20 16:19:05,457 - INFO - [Test3.] 글쓰기 페이지 PASSWORD 미 입력 작성 테스트 시작
+2025-03-20 16:19:05,457 - INFO - ✅ Chrome Driver Start
+2025-03-20 16:19:28,753 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 16:20:05,661 - INFO - ✅ 글쓰기 페이지 이동
+2025-03-20 16:20:05,669 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:20:08,764 - INFO - ✅ NAME 입력: 홍길동
+2025-03-20 16:20:09,918 - INFO - ✅ '작성 완료' 클릭
+2025-03-20 16:20:10,937 - INFO - ✅ 팝업 등장 : 비밀번호을 입력하세요. - 기능 정상 작동
+2025-03-20 16:20:10,959 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:20:10,959 - INFO - ✅[TEST3.] 테스트 완료
+2025-03-20 16:20:10,962 - INFO - [Test4.] 글쓰기 페이지 TITLE 미 선택 작성 테스트 시작
+2025-03-20 16:20:10,962 - INFO - ✅ Chrome Driver Start
+2025-03-20 16:20:34,385 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 16:20:58,799 - INFO - ✅ 글쓰기 페이지 이동
+2025-03-20 16:20:58,806 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:21:01,914 - INFO - ✅ NAME 입력: 홍길동
+2025-03-20 16:21:05,017 - INFO - ✅ PASSWORD 입력: 123123
+2025-03-20 16:21:06,126 - INFO - ✅ '작성 완료' 클릭
+2025-03-20 16:21:07,135 - INFO - ✅ 팝업 등장 : 말머리를 선택하세요. - 기능 정상 작동
+2025-03-20 16:21:07,152 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:21:07,153 - INFO - ✅[TEST4.] 테스트 완료
+2025-03-20 16:21:07,156 - INFO - [Test5.] 글쓰기 페이지 CONTENT 미 작성 테스트 시작
+2025-03-20 16:21:07,157 - INFO - ✅ Chrome Driver Start
+2025-03-20 16:21:30,467 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 16:21:54,855 - INFO - ✅ 글쓰기 페이지 이동
+2025-03-20 16:21:54,862 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:21:57,983 - INFO - ✅ NAME 입력: 홍길동
+2025-03-20 16:22:01,109 - INFO - ✅ PASSWORD 입력: 123123
+2025-03-20 16:22:03,270 - INFO - ✅ '일반문의' 선택
+2025-03-20 16:22:04,362 - INFO - ✅ '작성 완료' 클릭
+2025-03-20 16:22:05,374 - INFO - ✅ 팝업 등장 : 개인정보 수집·이용에 동의하신 후에 글을 작성 하실 수 있습니다. - 기능 정상 작동
+2025-03-20 16:22:05,383 - INFO - ✅ 현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
+2025-03-20 16:22:05,384 - INFO - ✅[TEST5.] 테스트 완료
