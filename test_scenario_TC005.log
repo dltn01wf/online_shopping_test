@@ -1,0 +1,7 @@
+2025-03-20 11:01:50,832 - INFO - [Test1.] 테스트 시작
+2025-03-20 11:01:50,832 - INFO - ✅ Chrome Driver Start
+2025-03-20 11:02:14,856 - INFO - ✅ 현재 URL: https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 11:02:14,861 - INFO - ✅현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom
+2025-03-20 11:02:39,253 - INFO - ✅ 글쓰기 페이지 이동
+2025-03-20 11:02:39,259 - INFO - '글쓰기' 페이지 이동중..
+2025-03-20 11:02:39,259 - INFO - ✅현재 URL : https://www.nibbuns.co.kr/board/board.html?code=piasom&page=1&board_cate=&type=i
