@@ -10,6 +10,9 @@ import random
 class ShopdetailPage:
     URL = "https://www.nibbuns.co.kr/shop/bestseller.html?xcode=BEST&ref=&suburl=shop%2Fbestseller.html%3Fxcode%3DBEST/"
     SEARCH_INPUT_ID = '//*[@id="hd"]/div[3]/div[1]/div[2]/form/fieldset/input'
+    SOLD_OUT = '품절'
+    OPTION_XPATH = '//*[@id="MK_innerOptScroll"]//a[@href]'
+    OPTION_CLASS = 'basic_option'
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
@@ -47,9 +50,26 @@ class ShopdetailPage:
     #shopdetail에서 작동
     def choice_option(self, select : int) :
         option = self.driver.find_element(By.CLASS_NAME ,"basic_option")
-        Select(option).select_by_index(select)
-    
+        if any(self.SOLD_OUT in item for item in option.text) :
+            Select(option).select_by_index(select+1)
+            
     #shopdetail에서 작동
     def random_option(self) :
         option = self.driver.find_element(By.CLASS_NAME ,"basic_option")
-        Select(option).select_by_index(random.randint(1, len(Select(option).options) - 1))
+        if any(self.SOLD_OUT in item for item in option.text) :
+            Select(option).select_by_index(random.randint(1, len(Select(option).options) - 1))
+
+    def count_up_option(self, select : int) :
+        option= self.driver.find_elements(By.XPATH, self.OPTION_XPATH)
+        if len(option) > select*3 or any(self.SOLD_OUT in item for item in option.text) :
+            option[select*3].click()
+        
+    def count_down_option(self, select : int) :
+        option= self.driver.find_elements(By.XPATH, self.OPTION_XPATH)
+        if len(option) > select*3 or any(self.SOLD_OUT in item for item in option.text):
+            option[1 + select*3].click()
+        
+    def choice_del_option(self, select : int) :
+        option= self.driver.find_elements(By.XPATH, self.OPTION_XPATH)
+        if len(option) > select*3 or any(self.SOLD_OUT in item for item in option.text) :
+            option[2 + select*3].click()
